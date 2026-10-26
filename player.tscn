@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bo4opnevbgyhh"]
+
+[ext_resource type="Script" uid="uid://cr8i703aeg5l3" path="res://player.gd" id="1_4flbx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6gam"]
+size = Vector2(64, 64)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_j6gam"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1981473793]
+script = ExtResource("1_4flbx")
+
+[node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=1424638099]
+shape = SubResource("RectangleShape2D_j6gam")
+
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=184179606]
+scale = Vector2(64, 64)
+texture = SubResource("CanvasTexture_j6gam")

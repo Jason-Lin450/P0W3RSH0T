@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dpesq5smo2ln2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6gam"]
+size = Vector2(384, 8)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_j6gam"]
+
+[node name="Borders" type="Node2D" unique_id=242374955]
+
+[node name="TopBorderLeft" type="StaticBody2D" parent="." unique_id=718810253]
+
+[node name="TopBorderLeftHB" type="CollisionShape2D" parent="TopBorderLeft" unique_id=434042924]
+position = Vector2(384, 36)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_j6gam")
+
+[node name="TopBorderLeftSprite" type="Sprite2D" parent="TopBorderLeft/TopBorderLeftHB" unique_id=46770034]
+position = Vector2(0.06375912, 0.012048958)
+rotation = -3.1415925
+scale = Vector2(383.94388, 7.9788322)
+texture = SubResource("CanvasTexture_j6gam")
