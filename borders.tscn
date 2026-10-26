@@ -5,6 +5,9 @@ size = Vector2(384, 8)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_j6gam"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuip0"]
+size = Vector2(7.9999847, 288)
+
 [node name="Borders" type="Node2D" unique_id=242374955]
 
 [node name="TopBorderLeft" type="StaticBody2D" parent="." unique_id=718810253]
@@ -18,4 +21,95 @@ shape = SubResource("RectangleShape2D_j6gam")
 position = Vector2(0.06375912, 0.012048958)
 rotation = -3.1415925
 scale = Vector2(383.94388, 7.9788322)
+texture = SubResource("CanvasTexture_j6gam")
+
+[node name="TopBorderRight" type="StaticBody2D" parent="." unique_id=412502404]
+
+[node name="TopBorderRightHB" type="CollisionShape2D" parent="TopBorderRight" unique_id=641538931]
+position = Vector2(768, 36)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_j6gam")
+
+[node name="TopBorderRightSprite" type="Sprite2D" parent="TopBorderRight/TopBorderRightHB" unique_id=1374579222]
+position = Vector2(0.06375912, 0.012048958)
+rotation = -3.1415925
+scale = Vector2(383.94388, 7.9788322)
+texture = SubResource("CanvasTexture_j6gam")
+
+[node name="BottomBorderLeft" type="StaticBody2D" parent="." unique_id=1564538574]
+
+[node name="BottomBorderLeftHB" type="CollisionShape2D" parent="BottomBorderLeft" unique_id=1016735544]
+position = Vector2(384, 612)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_j6gam")
+
+[node name="BottomBorderLeftSprite" type="Sprite2D" parent="BottomBorderLeft/BottomBorderLeftHB" unique_id=1086986795]
+position = Vector2(0.06375912, 0.012048958)
+rotation = -3.1415925
+scale = Vector2(383.94388, 7.9788322)
+texture = SubResource("CanvasTexture_j6gam")
+
+[node name="BottomBorderRight" type="StaticBody2D" parent="." unique_id=1693802079]
+
+[node name="BottomBorderRightHB" type="CollisionShape2D" parent="BottomBorderRight" unique_id=329989004]
+position = Vector2(768, 612)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_j6gam")
+
+[node name="BottomBorderRightSprite" type="Sprite2D" parent="BottomBorderRight/BottomBorderRightHB" unique_id=1366463221]
+position = Vector2(0.06375912, 0.012048958)
+rotation = -3.1415925
+scale = Vector2(383.94388, 7.9788322)
+texture = SubResource("CanvasTexture_j6gam")
+
+[node name="LeftBorderTop" type="StaticBody2D" parent="." unique_id=402253517]
+
+[node name="LeftBorderTopHB" type="CollisionShape2D" parent="LeftBorderTop" unique_id=1160576106]
+position = Vector2(188.00002, 184)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_tuip0")
+
+[node name="LeftBorderTopSprite" type="Sprite2D" parent="LeftBorderTop/LeftBorderTopHB" unique_id=93477979]
+position = Vector2(0.0085528605, -5.3867698e-05)
+rotation = -3.1415925
+scale = Vector2(8.16648, 287.99713)
+texture = SubResource("CanvasTexture_j6gam")
+
+[node name="RightBorderTop" type="StaticBody2D" parent="." unique_id=1999602770]
+
+[node name="RightBorderTopHB" type="CollisionShape2D" parent="RightBorderTop" unique_id=114315227]
+position = Vector2(964, 184)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_tuip0")
+
+[node name="RightBorderTopSprite" type="Sprite2D" parent="RightBorderTop/RightBorderTopHB" unique_id=1386656363]
+position = Vector2(0.0085528605, -5.3867698e-05)
+rotation = -3.1415925
+scale = Vector2(8.16648, 287.99713)
+texture = SubResource("CanvasTexture_j6gam")
+
+[node name="LeftBorderBottom" type="StaticBody2D" parent="." unique_id=73543228]
+
+[node name="LeftBorderBottomHB" type="CollisionShape2D" parent="LeftBorderBottom" unique_id=670194223]
+position = Vector2(188, 464)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_tuip0")
+
+[node name="LeftBorderBottomSprite" type="Sprite2D" parent="LeftBorderBottom/LeftBorderBottomHB" unique_id=486260796]
+position = Vector2(0.0085528605, -5.3867698e-05)
+rotation = -3.1415925
+scale = Vector2(8.16648, 287.99713)
+texture = SubResource("CanvasTexture_j6gam")
+
+[node name="RightBorderBottom" type="StaticBody2D" parent="." unique_id=528766325]
+
+[node name="RightBorderBottomHB" type="CollisionShape2D" parent="RightBorderBottom" unique_id=1557711903]
+position = Vector2(964, 464)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_tuip0")
+
+[node name="RightBorderBottomSprite" type="Sprite2D" parent="RightBorderBottom/RightBorderBottomHB" unique_id=1596227082]
+position = Vector2(0.0085528605, -5.3867698e-05)
+rotation = -3.1415925
+scale = Vector2(8.16648, 287.99713)
 texture = SubResource("CanvasTexture_j6gam")
