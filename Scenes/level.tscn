@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c12qq5g6yv0s1"]
+
+[ext_resource type="Script" uid="uid://7qt8yawbqu03" path="res://Scenes/level.gd" id="1_6phgx"]
+[ext_resource type="PackedScene" uid="uid://bo4opnevbgyhh" path="res://Scenes/player.tscn" id="1_k5f4k"]
+[ext_resource type="PackedScene" uid="uid://dpesq5smo2ln2" path="res://Scenes/borders.tscn" id="2_6phgx"]
+
+[node name="Level" type="Node2D" unique_id=1621707310]
+script = ExtResource("1_6phgx")
+
+[node name="Player" parent="." unique_id=1981473793 instance=ExtResource("1_k5f4k")]
+position = Vector2(352, 480)
+
+[node name="Borders" parent="." unique_id=242374955 instance=ExtResource("2_6phgx")]
+
+[node name="Projectiles" type="Node2D" parent="." unique_id=208501109]
+
+[node name="SubProjectiles" type="Node2D" parent="." unique_id=1745079468]
