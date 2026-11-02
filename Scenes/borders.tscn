@@ -15,7 +15,7 @@ script = ExtResource("1_1r7dd")
 
 [node name="TopBorderLeft" type="StaticBody2D" parent="." unique_id=718810253]
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 
 [node name="TopBorderLeftHB" type="CollisionShape2D" parent="TopBorderLeft" unique_id=434042924]
 position = Vector2(384, 36)
@@ -30,7 +30,7 @@ texture = SubResource("CanvasTexture_j6gam")
 
 [node name="TopBorderRight" type="StaticBody2D" parent="." unique_id=412502404]
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 
 [node name="TopBorderRightHB" type="CollisionShape2D" parent="TopBorderRight" unique_id=641538931]
 position = Vector2(768, 36)
@@ -45,7 +45,7 @@ texture = SubResource("CanvasTexture_j6gam")
 
 [node name="BottomBorderLeft" type="StaticBody2D" parent="." unique_id=1564538574]
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 
 [node name="BottomBorderLeftHB" type="CollisionShape2D" parent="BottomBorderLeft" unique_id=1016735544]
 position = Vector2(384, 612)
@@ -60,7 +60,7 @@ texture = SubResource("CanvasTexture_j6gam")
 
 [node name="BottomBorderRight" type="StaticBody2D" parent="." unique_id=1693802079]
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 
 [node name="BottomBorderRightHB" type="CollisionShape2D" parent="BottomBorderRight" unique_id=329989004]
 position = Vector2(768, 612)
@@ -75,7 +75,7 @@ texture = SubResource("CanvasTexture_j6gam")
 
 [node name="LeftBorderTop" type="StaticBody2D" parent="." unique_id=402253517]
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 
 [node name="LeftBorderTopHB" type="CollisionShape2D" parent="LeftBorderTop" unique_id=1160576106]
 position = Vector2(188.00002, 184)
@@ -90,7 +90,7 @@ texture = SubResource("CanvasTexture_j6gam")
 
 [node name="RightBorderTop" type="StaticBody2D" parent="." unique_id=1999602770]
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 
 [node name="RightBorderTopHB" type="CollisionShape2D" parent="RightBorderTop" unique_id=114315227]
 position = Vector2(964, 184)
@@ -105,7 +105,7 @@ texture = SubResource("CanvasTexture_j6gam")
 
 [node name="LeftBorderBottom" type="StaticBody2D" parent="." unique_id=73543228]
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 
 [node name="LeftBorderBottomHB" type="CollisionShape2D" parent="LeftBorderBottom" unique_id=670194223]
 position = Vector2(188, 464)
@@ -120,7 +120,7 @@ texture = SubResource("CanvasTexture_j6gam")
 
 [node name="RightBorderBottom" type="StaticBody2D" parent="." unique_id=528766325]
 collision_layer = 2
-collision_mask = 13
+collision_mask = 29
 
 [node name="RightBorderBottomHB" type="CollisionShape2D" parent="RightBorderBottom" unique_id=1557711903]
 position = Vector2(964, 464)

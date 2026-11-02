@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://7qt8yawbqu03" path="res://Scenes/level.gd" id="1_6phgx"]
 [ext_resource type="PackedScene" uid="uid://bo4opnevbgyhh" path="res://Scenes/player.tscn" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://dpesq5smo2ln2" path="res://Scenes/borders.tscn" id="2_6phgx"]
+[ext_resource type="PackedScene" uid="uid://bfrx8tmam0yrp" path="res://Scenes/level_ui.tscn" id="4_81xng"]
 
 [node name="Level" type="Node2D" unique_id=1621707310]
 script = ExtResource("1_6phgx")
@@ -12,6 +13,10 @@ position = Vector2(352, 480)
 
 [node name="Borders" parent="." unique_id=242374955 instance=ExtResource("2_6phgx")]
 
+[node name="LevelUI" parent="." unique_id=1982443914 instance=ExtResource("4_81xng")]
+
 [node name="Projectiles" type="Node2D" parent="." unique_id=208501109]
 
 [node name="SubProjectiles" type="Node2D" parent="." unique_id=1745079468]
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1839977607]

@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://bfrx8tmam0yrp"]
+
+[ext_resource type="Script" uid="uid://by84tobhbkd35" path="res://Scenes/encounter_ui_2.gd" id="1_gw16p"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_wqkje"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_j6gam"]
+
+[node name="LevelUI" type="CanvasLayer" unique_id=1982443914]
+script = ExtResource("1_gw16p")
+
+[node name="PlayerHealthBar" type="TextureProgressBar" parent="." unique_id=2062239731]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 168.0
+offset_bottom = 48.0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = SubResource("CanvasTexture_wqkje")
+
+[node name="PlayerHealth" type="Label" parent="PlayerHealthBar" unique_id=676611480]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -16.0
+offset_right = 76.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyHealthBar" type="TextureProgressBar" parent="." unique_id=927978387]
+offset_left = 216.0
+offset_top = 64.0
+offset_right = 936.0
+offset_bottom = 88.0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = SubResource("CanvasTexture_wqkje")
+
+[node name="EnemyHealth" type="Label" parent="EnemyHealthBar" unique_id=384591254]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -16.0
+offset_right = 76.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PowerIcon" type="TextureRect" parent="." unique_id=39221995]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -200.0
+offset_right = 160.0
+offset_bottom = -24.0
+grow_vertical = 0
+texture = SubResource("CanvasTexture_j6gam")
+
+[node name="Power" type="Label" parent="PowerIcon" unique_id=859388433]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -12.0
+offset_right = 68.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Power"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MapIcon" type="TextureRect" parent="." unique_id=1425038770]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -248.0
+offset_right = 160.0
+offset_bottom = -224.0
+grow_vertical = 0
+texture = SubResource("CanvasTexture_j6gam")
+
+[node name="Map" type="Label" parent="MapIcon" unique_id=177331065]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -12.0
+offset_right = 68.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Map"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ModsIcon" type="TextureRect" parent="." unique_id=454239056]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -296.0
+offset_right = 160.0
+offset_bottom = -272.0
+grow_vertical = 0
+texture = SubResource("CanvasTexture_j6gam")
+
+[node name="Mods" type="Label" parent="ModsIcon" unique_id=1843932797]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -12.0
+offset_right = 68.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Mods"
+horizontal_alignment = 1
+vertical_alignment = 1

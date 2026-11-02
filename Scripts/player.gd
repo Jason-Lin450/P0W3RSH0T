@@ -17,7 +17,7 @@ func _ready() -> void:
 	ProjectileTimer.start()
 	SubProjectileTimer.start()
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 
 	var direction = Input.get_vector("left","right","up","down")
