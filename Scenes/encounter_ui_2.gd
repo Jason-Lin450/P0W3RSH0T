@@ -13,12 +13,13 @@ func _ready() -> void:
 	PlayerHealth.text = str(PlayerHealthBar.value)
 	PlayerHealthBar.position = Vector2(16, 16)
 	EnemyHealthBar.position = Vector2(216, 64)
+	EnemyHealthBar.hide()
 	PowerIcon.position = Vector2(24, 448)
 	MapIcon.position = Vector2(24, 400)
 	ModsIcon.position = Vector2(24, 352)
-	
 
 func _process(delta: float) -> void:
 	PlayerHealth.text = str(PlayerHealthBar.value)
-	if Input.is_action_just_pressed("autofire"):
-		PlayerHealthBar.value -= 1
+
+func _hit_player(dmg):
+	PlayerHealthBar.value -= dmg

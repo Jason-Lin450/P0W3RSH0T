@@ -6,7 +6,7 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_j6gam"]
 
-[node name="LevelUI" type="CanvasLayer" unique_id=1982443914]
+[node name="LevelUI" type="CanvasLayer" unique_id=1982443914 groups=["levelui"]]
 script = ExtResource("1_gw16p")
 
 [node name="PlayerHealthBar" type="TextureProgressBar" parent="." unique_id=2062239731]

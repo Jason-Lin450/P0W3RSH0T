@@ -9,7 +9,7 @@ signal subshoot(pos, ang)
 var ProjectileCD : bool = true
 var SubProjectileCD : bool = true
 var AutoFire : bool = false
-var speed = 300.0
+var speed = 200
 
 func _ready() -> void:
 	ProjectileTimer.wait_time = 0.5
