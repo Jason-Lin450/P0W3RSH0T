@@ -12,14 +12,12 @@ func _ready() -> void:
 	PlayerHealthBar.value = 100
 	PlayerHealth.text = str(PlayerHealthBar.value)
 	PlayerHealthBar.position = Vector2(16, 16)
-	EnemyHealthBar.position = Vector2(216, 64)
 	EnemyHealthBar.hide()
+	EnemyHealth.text = str(EnemyHealthBar.value)
+	EnemyHealthBar.position = Vector2(216, 64)
 	PowerIcon.position = Vector2(24, 448)
 	MapIcon.position = Vector2(24, 400)
 	ModsIcon.position = Vector2(24, 352)
 
 func _process(delta: float) -> void:
 	PlayerHealth.text = str(PlayerHealthBar.value)
-
-func _hit_player(dmg):
-	PlayerHealthBar.value -= dmg

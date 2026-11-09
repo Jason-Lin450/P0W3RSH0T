@@ -19,6 +19,9 @@ func _process(delta: float) -> void:
 		var enemy = enemy_scene.instantiate()
 		Enemies.add_child(enemy)
 		enemy.position = get_global_mouse_position()
+		enemy.speed = 100
+		enemy.health = 2
+		enemy.atkdmg = 1
 	
 func _on_player_shoot(pos, ang) -> void:
 	var projectile = projectile_scene.instantiate()
