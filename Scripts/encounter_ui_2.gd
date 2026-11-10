@@ -13,7 +13,7 @@ func _ready() -> void:
 	PlayerHealth.text = str(PlayerHealthBar.value)
 	PlayerHealthBar.position = Vector2(16, 16)
 	EnemyHealthBar.hide()
-	EnemyHealth.text = str(EnemyHealthBar.value)
+	EnemyHealth.hide()
 	EnemyHealthBar.position = Vector2(216, 64)
 	PowerIcon.position = Vector2(24, 448)
 	MapIcon.position = Vector2(24, 400)

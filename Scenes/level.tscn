@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c12qq5g6yv0s1"]
 
-[ext_resource type="Script" uid="uid://7qt8yawbqu03" path="res://Scenes/level.gd" id="1_6phgx"]
+[ext_resource type="Script" uid="uid://7qt8yawbqu03" path="res://Scripts/level.gd" id="1_6phgx"]
 [ext_resource type="PackedScene" uid="uid://bo4opnevbgyhh" path="res://Scenes/player.tscn" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://dpesq5smo2ln2" path="res://Scenes/borders.tscn" id="2_6phgx"]
 [ext_resource type="PackedScene" uid="uid://bfrx8tmam0yrp" path="res://Scenes/level_ui.tscn" id="4_81xng"]
@@ -20,3 +20,10 @@ position = Vector2(352, 480)
 [node name="SubProjectiles" type="Node2D" parent="." unique_id=1745079468]
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1839977607]
+
+[node name="Indicators" type="Node2D" parent="." unique_id=436276263]
+
+[node name="EnemyTimer" type="Timer" parent="." unique_id=754345253]
+autostart = true
+
+[connection signal="timeout" from="EnemyTimer" to="." method="_on_enemy_timer_timeout"]

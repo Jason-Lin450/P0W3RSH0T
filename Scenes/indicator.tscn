@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cvxknrv4ma6"]
+
+[ext_resource type="Script" uid="uid://jum0h00f06sn" path="res://Scenes/indicator.gd" id="1_2k7kp"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_j6gam"]
+
+[node name="Indicator" type="Marker2D" unique_id=1037336969]
+script = ExtResource("1_2k7kp")
+
+[node name="IndicatorSprite" type="Sprite2D" parent="." unique_id=1748117505]
+scale = Vector2(16, 16)
+texture = SubResource("CanvasTexture_j6gam")
+
+[node name="IndicatorTimer" type="Timer" parent="." unique_id=715287131]

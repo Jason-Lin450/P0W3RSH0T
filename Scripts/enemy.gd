@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var LevelUI := get_tree().get_first_node_in_group("levelui")
 var speed
 var health
+var maxhealth
 var atkdmg
 
 func _ready() -> void:

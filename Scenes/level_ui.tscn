@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfrx8tmam0yrp"]
 
-[ext_resource type="Script" uid="uid://by84tobhbkd35" path="res://Scenes/encounter_ui_2.gd" id="1_gw16p"]
+[ext_resource type="Script" uid="uid://by84tobhbkd35" path="res://Scripts/encounter_ui_2.gd" id="1_gw16p"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_wqkje"]
 

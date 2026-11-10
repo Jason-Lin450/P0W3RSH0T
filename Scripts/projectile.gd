@@ -4,7 +4,6 @@ extends Area2D
 @onready var LevelUI := get_tree().get_first_node_in_group("levelui")
 var speed = 500
 var atkdmg = 1
-var temp
 
 func _ready() -> void:
 	pass
@@ -19,9 +18,12 @@ func _on_body_entered(body: Node2D) -> void:
 		queue_free()
 		for enemy in Enemies:
 			if body == enemy:
-				temp = enemy.health
 				enemy.health -= atkdmg
 				if (enemy.health > 0):
 					LevelUI.EnemyHealthBar.show()
-					LevelUI.EnemyHealthBar.value = (enemy.health * 1.0/temp) * 100
-	
+					LevelUI.EnemyHealth.show()
+					LevelUI.EnemyHealth.text = str(enemy.health)
+					LevelUI.EnemyHealthBar.value = (enemy.health * 1.0/enemy.maxhealth) * 100
+				else:
+					LevelUI.EnemyHealthBar.hide()
+					LevelUI.EnemyHealth.hide()
