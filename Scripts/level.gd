@@ -1,5 +1,9 @@
 extends Node2D
 
+#top_left = (192, 40)
+#top_right = (960, 40)
+#bottom_left = (192, 608)
+#bottom_right = (960, 608)
 @onready var Player := $Player
 @onready var Projectiles := $Projectiles
 @onready var SubProjectiles := $SubProjectiles
@@ -9,6 +13,7 @@ var projectile_scene: PackedScene = load("res://Scenes/projectile.tscn")
 var sub_projectile_scene: PackedScene = load("res://Scenes/sub_projectile.tscn")
 var enemy_scene: PackedScene = load("res://Scenes/enemy.tscn")
 var indicator_scene: PackedScene = load("res://Scenes/indicator.tscn")
+var rng := RandomNumberGenerator.new()
 
 func _ready() -> void:
 	Player.position = Vector2(352, 480)
@@ -32,20 +37,19 @@ func _on_player_sub_shoot(pos, ang) -> void:
 
 
 func _on_enemy_timer_timeout() -> void:
-	#var enemy = enemy_scene.instantiate()
-	#Enemies.add_child(enemy)
-	
+	var enemy = enemy_scene.instantiate()
+	Enemies.add_child(enemy)
+	enemy.position = Vector2(10000, 10000)
+	enemy.speed = 100
+	enemy.maxhealth = 3
+	enemy.health = enemy.maxhealth
+	enemy.atkdmg = 1
 	var indicator = indicator_scene.instantiate()
 	Indicators.add_child(indicator)
-	indicator.position = get_global_mouse_position()
-	#indicator.call("_spawn_enemy", enemy)
-	indicator.IndicatorTimer.start()
-	print(str(indicator.IndicatorTimer.wait_time))
-	if (indicator.IndicatorTimer.wait_time <= 0):
-		var enemy = enemy_scene.instantiate()
-		Enemies.add_child(enemy)
-		enemy.position = get_global_mouse_position()
-		enemy.speed = 100
-		enemy.maxhealth = 3
-		enemy.health = enemy.maxhealth
-		enemy.atkdmg = 1
+	var indicatorposition = Vector2(rng.randi_range(192, 960), rng.randi_range(40, 608))
+	
+	while (indicatorposition.distance_to(Player.position) < 250):
+		indicatorposition = Vector2(rng.randi_range(192, 960), rng.randi_range(40, 608))
+	
+	indicator.position = indicatorposition
+	indicator.call("_spawn_enemy", enemy, indicator)

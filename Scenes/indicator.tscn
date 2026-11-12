@@ -8,7 +8,7 @@
 script = ExtResource("1_2k7kp")
 
 [node name="IndicatorSprite" type="Sprite2D" parent="." unique_id=1748117505]
-scale = Vector2(16, 16)
+scale = Vector2(48, 48)
 texture = SubResource("CanvasTexture_j6gam")
 
 [node name="IndicatorTimer" type="Timer" parent="." unique_id=715287131]

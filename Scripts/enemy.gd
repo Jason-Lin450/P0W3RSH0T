@@ -18,6 +18,6 @@ func _physics_process(delta: float) -> void:
 	velocity = transform.x * speed
 	
 	move_and_slide()
-	if get_slide_collision(0) && get_slide_collision(0).get_collider() == Player:
+	if get_slide_collision_count() > 0 && get_slide_collision(0).get_collider() == Player:
 		queue_free()
 		LevelUI.PlayerHealthBar.value -= atkdmg

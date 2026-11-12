@@ -24,6 +24,7 @@ position = Vector2(352, 480)
 [node name="Indicators" type="Node2D" parent="." unique_id=436276263]
 
 [node name="EnemyTimer" type="Timer" parent="." unique_id=754345253]
+wait_time = 0.1
 autostart = true
 
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_enemy_timer_timeout"]
