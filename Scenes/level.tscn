@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c12qq5g6yv0s1"]
+
+[ext_resource type="Script" uid="uid://7qt8yawbqu03" path="res://Scripts/level.gd" id="1_6phgx"]
+[ext_resource type="PackedScene" uid="uid://bo4opnevbgyhh" path="res://Scenes/player.tscn" id="1_k5f4k"]
+[ext_resource type="PackedScene" uid="uid://dpesq5smo2ln2" path="res://Scenes/borders.tscn" id="2_6phgx"]
+[ext_resource type="PackedScene" uid="uid://bfrx8tmam0yrp" path="res://Scenes/level_ui.tscn" id="4_81xng"]
+
+[node name="Level" type="Node2D" unique_id=1621707310]
+script = ExtResource("1_6phgx")
+
+[node name="Player" parent="." unique_id=1981473793 instance=ExtResource("1_k5f4k")]
+position = Vector2(352, 480)
+
+[node name="Borders" parent="." unique_id=242374955 instance=ExtResource("2_6phgx")]
+
+[node name="LevelUI" parent="." unique_id=1982443914 instance=ExtResource("4_81xng")]
+
+[node name="Projectiles" type="Node2D" parent="." unique_id=208501109]
+
+[node name="SubProjectiles" type="Node2D" parent="." unique_id=1745079468]
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1839977607]
+
+[node name="Indicators" type="Node2D" parent="." unique_id=436276263]
+
+[node name="EnemyTimer" type="Timer" parent="." unique_id=754345253]
+autostart = true
+
+[connection signal="timeout" from="EnemyTimer" to="." method="_on_enemy_timer_timeout"]

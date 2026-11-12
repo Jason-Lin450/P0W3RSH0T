@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://p8nn16rpmgoa"]
+
+[ext_resource type="Script" uid="uid://shny11u4nneb" path="res://Scripts/sub_projectile.gd" id="1_la004"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j6gam"]
+radius = 8.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_j6gam"]
+
+[node name="SubProjectile" type="Area2D" unique_id=1730780486]
+collision_layer = 8
+collision_mask = 18
+script = ExtResource("1_la004")
+
+[node name="SubProjectileHB" type="CollisionShape2D" parent="." unique_id=373053319]
+shape = SubResource("CircleShape2D_j6gam")
+
+[node name="SubProjectileSprite" type="Sprite2D" parent="." unique_id=347391443]
+scale = Vector2(16, 16)
+texture = SubResource("CanvasTexture_j6gam")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
