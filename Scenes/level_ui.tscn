@@ -17,6 +17,7 @@ offset_bottom = 48.0
 value = 100.0
 nine_patch_stretch = true
 texture_progress = SubResource("CanvasTexture_wqkje")
+metadata/_edit_lock_ = true
 
 [node name="PlayerHealth" type="Label" parent="PlayerHealthBar" unique_id=676611480]
 layout_mode = 1
@@ -35,6 +36,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="EnemyHealthBar" type="TextureProgressBar" parent="." unique_id=927978387]
 offset_left = 216.0
@@ -44,6 +46,7 @@ offset_bottom = 88.0
 value = 100.0
 nine_patch_stretch = true
 texture_progress = SubResource("CanvasTexture_wqkje")
+metadata/_edit_lock_ = true
 
 [node name="EnemyHealth" type="Label" parent="EnemyHealthBar" unique_id=384591254]
 layout_mode = 1
@@ -62,6 +65,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="PowerIcon" type="TextureRect" parent="." unique_id=39221995]
 anchors_preset = 2
@@ -73,6 +77,7 @@ offset_right = 160.0
 offset_bottom = -24.0
 grow_vertical = 0
 texture = SubResource("CanvasTexture_j6gam")
+metadata/_edit_lock_ = true
 
 [node name="Power" type="Label" parent="PowerIcon" unique_id=859388433]
 layout_mode = 1
@@ -91,6 +96,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Power"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="MapIcon" type="TextureRect" parent="." unique_id=1425038770]
 anchors_preset = 2
@@ -102,6 +108,7 @@ offset_right = 160.0
 offset_bottom = -224.0
 grow_vertical = 0
 texture = SubResource("CanvasTexture_j6gam")
+metadata/_edit_lock_ = true
 
 [node name="Map" type="Label" parent="MapIcon" unique_id=177331065]
 layout_mode = 1
@@ -120,6 +127,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Map"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="ModsIcon" type="TextureRect" parent="." unique_id=454239056]
 anchors_preset = 2
@@ -131,6 +139,7 @@ offset_right = 160.0
 offset_bottom = -272.0
 grow_vertical = 0
 texture = SubResource("CanvasTexture_j6gam")
+metadata/_edit_lock_ = true
 
 [node name="Mods" type="Label" parent="ModsIcon" unique_id=1843932797]
 layout_mode = 1
@@ -149,3 +158,4 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Mods"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true

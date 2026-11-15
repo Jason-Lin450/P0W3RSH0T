@@ -1,20 +1,23 @@
 [gd_scene format=3 uid="uid://cd4e6lfjkdno5"]
 
 [ext_resource type="Script" uid="uid://dmopc7nsatnhi" path="res://Scripts/enemy.gd" id="1_hghv2"]
+[ext_resource type="Texture2D" uid="uid://4o8e0ybskn3o" path="res://Assets/EnemySprite.png" id="2_1f0kj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gw16p"]
 radius = 24.0
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_j6gam"]
 
 [node name="Enemy" type="CharacterBody2D" unique_id=289737745 groups=["enemy"]]
 collision_layer = 16
 collision_mask = 31
 script = ExtResource("1_hghv2")
+metadata/_edit_lock_ = true
 
 [node name="EnemyHB" type="CollisionShape2D" parent="." unique_id=1590692266]
 shape = SubResource("CircleShape2D_gw16p")
+metadata/_edit_lock_ = true
 
 [node name="EnemySprite" type="Sprite2D" parent="." unique_id=1204613453]
-scale = Vector2(48, 48)
-texture = SubResource("CanvasTexture_j6gam")
+position = Vector2(-4.4703484e-07, -4.4703484e-07)
+scale = Vector2(0.046875004, 0.046875004)
+texture = ExtResource("2_1f0kj")
+metadata/_edit_lock_ = true

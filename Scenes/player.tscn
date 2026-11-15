@@ -1,26 +1,28 @@
 [gd_scene format=3 uid="uid://bo4opnevbgyhh"]
 
 [ext_resource type="Script" uid="uid://cr8i703aeg5l3" path="res://Scripts/player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://d1lc2lfd37gfn" path="res://Assets/PlayerSprite.png" id="2_cvnsp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oi3di"]
 radius = 32.0
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_j6gam"]
-
 [node name="Player" type="CharacterBody2D" unique_id=1981473793 groups=["player"]]
 collision_mask = 2
 script = ExtResource("1_4flbx")
+metadata/_edit_lock_ = true
 
 [node name="PlayerHB" type="CollisionShape2D" parent="." unique_id=1424638099]
 shape = SubResource("CircleShape2D_oi3di")
+metadata/_edit_lock_ = true
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=184179606]
-scale = Vector2(64, 64)
-texture = SubResource("CanvasTexture_j6gam")
+position = Vector2(-5.9604645e-07, -5.9604645e-07)
+scale = Vector2(0.0625, 0.0625)
+texture = ExtResource("2_cvnsp")
+metadata/_edit_lock_ = true
 
 [node name="ProjectileTimer" type="Timer" parent="." unique_id=1181423648]
+one_shot = true
 
 [node name="SubProjectileTimer" type="Timer" parent="." unique_id=1872007178]
-
-[connection signal="timeout" from="ProjectileTimer" to="." method="_on_projectile_cd_timeout"]
-[connection signal="timeout" from="SubProjectileTimer" to="." method="_on_sub_projectile_timer_timeout"]
+one_shot = true

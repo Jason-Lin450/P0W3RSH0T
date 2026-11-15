@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 @onready var Player := get_tree().get_first_node_in_group("player")
 @onready var LevelUI := get_tree().get_first_node_in_group("levelui")
-@onready var EnemyHB := $EnemyHB
+@onready var HB := $EnemyHB
+@onready var sprite := $EnemySprite
 var speed
 var health
 var maxhealth

@@ -9,16 +9,16 @@ extends Node2D
 @onready var SubProjectiles := $SubProjectiles
 @onready var Enemies := $Enemies
 @onready var Indicators := $Indicators
-var projectile_scene: PackedScene = load("res://Scenes/projectile.tscn")
-var sub_projectile_scene: PackedScene = load("res://Scenes/sub_projectile.tscn")
-var enemy_scene: PackedScene = load("res://Scenes/enemy.tscn")
-var indicator_scene: PackedScene = load("res://Scenes/indicator.tscn")
+var projectile_scene := preload("res://Scenes/projectile.tscn")
+var sub_projectile_scene := preload("res://Scenes/sub_projectile.tscn")
+var enemy_scene := preload("res://Scenes/enemy.tscn")
+var indicator_scene := preload("res://Scenes/indicator.tscn")
 var rng := RandomNumberGenerator.new()
 
 func _ready() -> void:
 	Player.position = Vector2(352, 480)
-	Player.connect('shoot', _on_player_shoot)
-	Player.connect('subshoot', _on_player_sub_shoot)
+	Player.shoot.connect(_on_player_shoot)
+	Player.subshoot.connect(_on_player_sub_shoot)
 
 func _process(delta: float) -> void:
 	pass
@@ -46,10 +46,11 @@ func _on_enemy_timer_timeout() -> void:
 	enemy.atkdmg = 1
 	var indicator = indicator_scene.instantiate()
 	Indicators.add_child(indicator)
-	var indicatorposition = Vector2(rng.randi_range(192 + enemy.EnemyHB.shape.radius, 960 - enemy.EnemyHB.shape.radius), rng.randi_range(40 + enemy.EnemyHB.shape.radius, 608 - enemy.EnemyHB.shape.radius))
+	var radius = enemy.HB.shape.radius
+	var indicatorposition = Vector2(rng.randi_range(192 + radius, 960 - radius), rng.randi_range(40 + radius, 608 - radius))
 	
-	while (indicatorposition.distance_to(Player.position) < 250):
-		indicatorposition = Vector2(rng.randi_range(192 + enemy.EnemyHB.shape.radius, 960 - enemy.EnemyHB.shape.radius), rng.randi_range(40 + enemy.EnemyHB.shape.radius, 608 - enemy.EnemyHB.shape.radius))
+	while (indicatorposition.distance_squared_to(Player.position) < 250 * 250):
+		indicatorposition = Vector2(rng.randi_range(192 + radius, 960 - radius), rng.randi_range(40 + radius, 608 - radius))
 	
 	indicator.position = indicatorposition
-	indicator.call("_spawn_enemy", enemy, indicator)
+	indicator._spawn_enemy(enemy)
