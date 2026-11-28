@@ -17,5 +17,7 @@ func _spawn_enemy(body: Node2D):
 	tween.tween_property(IndicatorSprite, "self_modulate:a", 0.1, duration).from(0.6)
 	await tween.finished
 	body.position = position
+	body.visible = true
+	body.process_mode = Node.PROCESS_MODE_INHERIT
 	queue_free()
 	return

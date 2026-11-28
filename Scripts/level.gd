@@ -20,6 +20,7 @@ var enemy_speed = 100
 var enemy_dmg = 1
 
 func _ready() -> void:
+	rng.randomize()
 	Player.position = Vector2(352, 480)
 	Player.shoot.connect(_on_player_shoot)
 	Player.subshoot.connect(_on_player_sub_shoot)
@@ -45,7 +46,8 @@ func _on_player_sub_shoot(pos, ang) -> void:
 func _on_enemy_timer_timeout() -> void:
 	var enemy = enemy_scene.instantiate()
 	Enemies.add_child(enemy)
-	enemy.position = Vector2(10000, 10000)
+	enemy.visible = false
+	enemy.process_mode = Node.PROCESS_MODE_DISABLED
 	enemy.maxhealth = enemy_maxhealth
 	enemy.health = enemy.maxhealth
 	enemy.speed = enemy_speed
